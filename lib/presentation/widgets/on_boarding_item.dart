@@ -1,6 +1,7 @@
-import 'package:bloc_task/utils/constants.dart';
+import 'package:bloc_task/constants/helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OnBoardingItem extends StatelessWidget {
@@ -15,17 +16,14 @@ class OnBoardingItem extends StatelessWidget {
   final String secString;
   @override
   Widget build(BuildContext context) {
-
     return Column(
       children: [
         SizedBox(
-          height: h * 0.4,
-          width: w * 0.9,
+          height: Helpers.height * 0.4,
+          width: Helpers.width * 0.9,
           child: SvgPicture.asset(imagePath),
         ),
-        SizedBox(
-          height: h * 0.08,
-        ),
+        Gap(Helpers.height * 0.08),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Text(

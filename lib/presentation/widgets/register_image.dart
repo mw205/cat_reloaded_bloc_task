@@ -1,9 +1,12 @@
-import 'package:bloc_task/utils/constants.dart';
+import 'package:bloc_task/constants/helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 enum RegisterPageImageType { signIn, signUp }
+
 class RegisterPageImage extends StatelessWidget {
   const RegisterPageImage({
     required this.type,
@@ -12,18 +15,16 @@ class RegisterPageImage extends StatelessWidget {
   final RegisterPageImageType type;
   @override
   Widget build(BuildContext context) {
-
-
     switch (type) {
       case RegisterPageImageType.signIn:
         return SizedBox(
-          height: h * 0.31,
+          height: Helpers.height * 0.31,
           child: Stack(
             children: [
               Align(
                 alignment: Alignment.bottomCenter,
                 child: SizedBox(
-                  height: h * 0.15,
+                  height: Helpers.height * 0.15,
                   child: Column(
                     children: [
                       Text(
@@ -47,7 +48,7 @@ class RegisterPageImage extends StatelessWidget {
               Align(
                 alignment: Alignment.centerRight,
                 child: SizedBox(
-                    width: w * 0.88,
+                    width: Helpers.width * 0.88,
                     child: SvgPicture.asset("assets/images/register.svg")),
               ),
             ],
@@ -55,13 +56,13 @@ class RegisterPageImage extends StatelessWidget {
         );
       case RegisterPageImageType.signUp:
         return SizedBox(
-          height: h * 0.31,
+          height: Helpers.height * 0.31,
           child: Stack(
             children: [
               Align(
                 alignment: Alignment.bottomCenter,
                 child: SizedBox(
-                  height: h * 0.18,
+                  height: Helpers.height * 0.18,
                   child: Column(
                     children: [
                       Text(
@@ -85,7 +86,7 @@ class RegisterPageImage extends StatelessWidget {
               Align(
                 alignment: Alignment.centerRight,
                 child: SizedBox(
-                    width: w * 0.88,
+                    width: Helpers.width * 0.88,
                     child: SvgPicture.asset("assets/images/register.svg")),
               ),
             ],
@@ -93,7 +94,7 @@ class RegisterPageImage extends StatelessWidget {
         );
 
       default:
-        return const SizedBox();
+        return const Gap(0);
     }
   }
 }

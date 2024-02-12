@@ -1,4 +1,4 @@
-import 'package:bloc_task/pages/onboarding_page.dart';
+import 'package:bloc_task/presentation/pages/onboarding_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';

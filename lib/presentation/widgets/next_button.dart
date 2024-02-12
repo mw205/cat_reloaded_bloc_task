@@ -1,4 +1,5 @@
-import 'package:bloc_task/utils/constants.dart';
+import 'package:bloc_task/constants/helpers.dart';
+import 'package:bloc_task/constants/my_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,10 +15,10 @@ class NextButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: h * 0.067,
-        width: w * 0.85,
+        height: Helpers.height * 0.067,
+        width: Helpers.width * 0.85,
         decoration: BoxDecoration(
-          color: primColor,
+          color: MyColors.primColor,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Center(

@@ -1,9 +1,9 @@
-import 'package:bloc_task/pages/sign_in_page.dart';
+import 'package:bloc_task/constants/helpers.dart';
+import 'package:bloc_task/presentation/pages/sign_in_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../utils/constants.dart';
 import '../widgets/on_boarding_item.dart';
 
 class OnBoardingPage extends StatelessWidget {
@@ -36,7 +36,7 @@ class OnBoardingPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            height: h * 0.74,
+            height: Helpers.height * 0.74,
             child: PageView(
               controller: pageViewController,
               children: pagesData
@@ -79,8 +79,8 @@ class OnBoardingPage extends StatelessWidget {
                   child: Container(
                     decoration: const BoxDecoration(
                         shape: BoxShape.circle, color: Colors.black),
-                    width: h * 0.06,
-                    height: h * 0.06,
+                    width: Helpers.height * 0.06,
+                    height: Helpers.height * 0.06,
                     child: const Icon(
                       Icons.arrow_forward_ios_rounded,
                       color: Colors.white,
